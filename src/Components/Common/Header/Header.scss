@@ -34,7 +34,7 @@
         justify-content: center;
         z-index: 10001;
         overflow: hidden;
-        width: 150px;
+        width: 80px;
         height: 100%;
 
         .logo {
@@ -86,13 +86,13 @@
 
                 svg {
                     font-size: 16px;
-                    color: #259FBA;
+                    color: #D9A352;
                     transition: .5s;
                 }
             }
 
             .menu-items:hover a {
-                color: #259FBA;
+                color: #D9A352;
                 transition: .5s;
                 font-weight: bold;
             }
@@ -103,12 +103,12 @@
             }
 
             a:hover {
-                color: #259FBA;
+                color: #D9A352;
                 transition: .5s;
             }
 
             a.active {
-                color: #259FBA;
+                color: #D9A352;
                 transition: .5s;
             }
         }
@@ -175,49 +175,27 @@
     }
 }
 
-// .navbar.bg-black {
-//     background: black;
-//     // top: 0;
-//     padding-top: 18px;  /* simulate top spacing visually */
-//     height: 85px;
-//     transition: all 0.5s ease;
-// }
-
-.navbar.bg-black {
-  background: black;
-
-  &::before {
-    background: black;
-  }
-}
-
 .navbar.sticky {
-    background: black;
+    background: white;
+    color: black;
+
+    .nav-links-div {
+        .menu-bar {
+            .menu-items {
+                color: black;
+            }
+        }
+    }
 
     &::before {
-      background: black;
+      background: white;
     }
-    // background: black;
-    // max-width: 1200px;
-    // padding: 5px 50px;
-    // color: white;
-    // background: rgba(0, 0, 0, 0.5);
-    // backdrop-filter: blur(30px);
-    // -webkit-backdrop-filter: blur(30px);
-    // box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-    // border: 2px solid rgba(255, 255, 255, 0.18);
-    // border-radius: 100px;
-    // transition: all 0.5s ease;
+}
 
-    // .nav-links-div ul li, .nav-links-div ul li a, .nav-links-div .login-icon {
-    //     color: white;
-    //     transition: .5s;
-    // }
-
-    // .nav-links-div ul li:hover, .nav-links-div ul li a:hover, .nav-links-div .login-icon:hover {
-    //     color: #259FBA;
-    //     transition: .5s;
-    // }
+.navbar.thank-you-header {
+    .nav-links-div {
+        display: none;
+    }
 }
 
 @media (max-width: 1600px) {
@@ -315,7 +293,7 @@
                     }
 
                     svg:hover {
-                        color: #259FBA;
+                        color: #D9A352;
                         transform: scale(1.1);
                         transition: .3s;
                     }
@@ -423,7 +401,7 @@
                 }
 
                 &:hover {
-                    color: #259FBA;
+                    color: #D9A352;
                     transition: 0.5s;
             }
             }

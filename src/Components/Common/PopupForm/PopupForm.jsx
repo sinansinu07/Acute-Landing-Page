@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 
 import './PopupForm.scss';
-import logo from "../../../Assets/Logo/damac-white-logo.webp"
-import image from "../../../Assets/Gallery/img22.webp"
+import logo from "../../../Assets/Logo/acute-tourism-logo.png"
+import image from "../../../Assets/Gallery/yas-island-water-park.avif"
 import { useNavigate } from 'react-router-dom';
 import { IoClose } from 'react-icons/io5';
 import { TextField } from '@mui/material';
 import PhoneInput from "react-phone-input-2"
 import "react-phone-input-2/lib/style.css";
-const PUBLIC_KEY = "_Brk5dkZd_0m-_xFM";
-const SERVICE_ID = "service_xad06ea";
-const TEMPLATE_ID = "template_bo3cjet";
+const PUBLIC_KEY = "PKoR53EHJAUqG_BLQ";
+const SERVICE_ID = "service_g654l6k";
+const TEMPLATE_ID = "template_lpssnjq";
 
 function PopupForm({ handleClose, handleSubmit }) {
   const navigate = useNavigate();
@@ -26,6 +26,7 @@ function PopupForm({ handleClose, handleSubmit }) {
 
   const [formErrors, setFormErrors] = useState({});
   const [response, setResponse] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const errors = {};
 
@@ -44,15 +45,16 @@ function PopupForm({ handleClose, handleSubmit }) {
 
   const sendContactFormEmail = async (formData) => {
       const templateParams = {
-          firstName: formData.firstName,
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
           message: formData.message,
+          time: new Date().toLocaleString(),
           // service: formData.service,
       };
 
       try {
+          setIsLoading(true);
           const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
           console.log("Email sent successfully!", response);
           setResponse("Email sent successfully!");
@@ -60,6 +62,8 @@ function PopupForm({ handleClose, handleSubmit }) {
       } catch (error) {
           console.error("Email sending error:", error);
           setResponse("Email sending error");
+      } finally {
+          setIsLoading(false);
       }
   };
 
@@ -125,7 +129,7 @@ function PopupForm({ handleClose, handleSubmit }) {
               {formErrors.name && <div className="error-message">{formErrors.name}</div>}
 
               <PhoneInput
-                country={""}
+                country={"ae"}
                 value={formData.phone}
                 onChange={(phone) => setFormData(prev => ({ ...prev, phone }))}
                 inputProps={{
@@ -190,7 +194,9 @@ function PopupForm({ handleClose, handleSubmit }) {
               <TextField label="Message" variant="outlined" multiline rows={4} value={formData.message} onChange={handleUpdate('message')} fullWidth className="form-field" required />
               {formErrors.message && <div className="error-message">{formErrors.message}</div>}
 
-              <button type="submit" className="btn-white">Submit</button>
+              <button type="submit" className="btn-white" disabled={isLoading}>
+                {isLoading ? 'Sending...' : 'Submit'}
+              </button>
               {response && <span className="form-response">{response}</span>}
             </form>
           {/* </div> */}

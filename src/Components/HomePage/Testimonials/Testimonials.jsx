@@ -7,43 +7,41 @@ import "./Testimonials.css"
 
 // import next_icon from "../../../Assets/Common/next-icon.png"
 // import back_icon from "../../../Assets/Common/back-icon.png"
-import client1 from "../../../Assets/Testimonials/FENDI-CASA.png"
-import client2 from "../../../Assets/Testimonials/Roberto-Cavalli-logo.png"
-import client3 from "../../../Assets/Testimonials/The_Trump_Organization_logo.svg"
-import client4 from "../../../Assets/Testimonials/versace-home.png"
+import client1 from "../../../Assets/Common/account-icon.png"
 
 import Quote from '../../../Assets/Common/blockquote.svg';
 
 const testimonials = [
   {
-      id: 1,
-      image: client1, // Fendi Casa
-      companyName: "Fendi Casa",
-      head: "Italian Elegance in Every Detail",
-      text: "Partnering with DAMAC allowed us to bring the spirit of Fendi Casa into luxury living. Together, we created residences that blend Italian sophistication with Dubai’s modern lifestyle — a true statement of elegance."
+    id: 1,
+    image: client1, // A family photo
+    companyName: "The Williams Family",
+    head: "A Truly Unforgettable Family Holiday",
+    text: "Acute Tourism made our Dubai trip seamless. From desert safaris to a magical evening at the dhow cruise, every detail was perfectly arranged. We felt cared for at every step."
   },
   {
-      id: 2,
-      image: client2, // Roberto Cavalli
-      companyName: "Roberto Cavalli",
-      head: "Fashion Meets Architecture",
-      text: "Our collaboration with DAMAC has been extraordinary. The interiors reflect Cavalli’s bold design language while delivering an unmatched residential experience. DAMAC truly understands how to merge fashion and real estate."
+    id: 2,
+    image: client1, // A solo traveler
+    companyName: "Sophia L.",
+    head: "The Best Solo Adventure Ever",
+    text: "Traveling alone can be overwhelming, but Acute Tourism made me feel safe and excited. I explored Abu Dhabi’s Grand Mosque, enjoyed a thrilling dune bashing ride, and met wonderful guides. Highly recommended!"
   },
   {
-      id: 3,
-      image: client3, // Trump
-      companyName: "Trump Organization",
-      head: "Setting New Standards of Prestige",
-      text: "Working with DAMAC on the Trump International Golf Club and branded residences has been exceptional. Their commitment to quality, luxury, and innovation mirrors our own values, making this partnership truly world-class."
+    id: 3,
+    image: client1, // A corporate group
+    companyName: "TechWorld Enterprises",
+    head: "Flawless Corporate Retreat",
+    text: "Our company retreat was handled professionally from start to finish. From luxury hotel bookings to guided city tours, everything exceeded our expectations. Our team had an amazing bonding experience."
   },
   {
-      id: 4,
-      image: client4, // Versace Home
-      companyName: "Versace Home",
-      head: "Luxury Lifestyle, Versace Style",
-      text: "Through our partnership with DAMAC, we brought the essence of Versace into high-end real estate. The result is homes that don’t just offer luxury — they embody the iconic Versace lifestyle."
+    id: 4,
+    image: client1, // A couple
+    companyName: "Arjun & Maya",
+    head: "A Romantic Getaway",
+    text: "We booked a honeymoon package with Acute Tourism, and it was nothing short of magical. The desert dinner under the stars was our favorite memory. Truly a trip we will cherish forever."
   },
 ];
+
 
 
 const Testimonials = () => {

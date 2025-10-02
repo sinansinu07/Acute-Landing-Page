@@ -83,7 +83,7 @@
                         flex-shrink: 0;
                         width: 40px;
                         height: 40px;
-                        background: linear-gradient(135deg, #259FBA, #1a7a8f);
+                        background: linear-gradient(135deg, #192957,#D9A352);
                         border-radius: 10px;
                         display: flex;
                         align-items: center;
@@ -249,6 +249,51 @@
                     text-align: left;
                 }
             }
+
+            .react-tel-input:hover {
+                background-color: transparent; /* subtle dark hover */
+            }
+
+            .react-tel-input .country-list .country:hover {
+                background-color: rgba(255, 255, 255, 0.1) !important; /* subtle dark hover */
+                color: white !important;
+            }
+                
+            .react-tel-input .country-list {
+                background-color: black !important;
+                color: white !important;
+            }
+                
+            .react-tel-input .country-list .country {
+                color: white !important;
+                text-align: left !important;
+            }
+
+            /* Prevent country code (flag button) from turning white on hover */
+            .react-tel-input .flag-dropdown:hover {
+                background-color: transparent !important;
+            }
+            
+            .react-tel-input .flag-dropdown.open {
+                background-color: transparent !important;
+            }
+            
+            .react-tel-input .selected-flag:hover {
+                background-color: transparent !important;
+            }
+            
+            /* Remove white background on hover for dropdown options */
+            .react-tel-input .country-list .country:hover {
+                background-color: transparent !important;
+                color: #000 !important; /* make sure text stays visible */
+            }
+            
+            /* Ensure selected option also doesn’t get forced background */
+            .react-tel-input .country-list .country.highlight {
+                background-color: transparent !important;
+                color: #000 !important;
+            }
+            
 
             .btn-blue {
                 width: 150px;

@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import "./Header.scss"
 
-import logo from "../../../Assets/Logo/damac-white-logo.webp"
+import logo from "../../../Assets/Logo/acute-tourism-logo.png"
 import whatsapp from "../../../Assets/Common/whatsapp.svg"
 
 import { useLocation } from 'react-router-dom'
 import { navs } from '../../../App.util'
 import { RiMenu2Line } from 'react-icons/ri'
 import { IoClose } from 'react-icons/io5'
-import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri"
-import { FaXTwitter } from "react-icons/fa6";
 import { MdCall } from 'react-icons/md'
 import useIsMobile from '../../../Utils/useIsMobile'
 
@@ -57,7 +54,7 @@ export default function Header(){
 
     return (
         <nav className='navbar-container'>
-            <div className={`navbar ${isSticky ? "sticky" : ""}`}>
+            <div className={`navbar ${isSticky ? "sticky" : ""} ${location.pathname === "/thank-you" ? "thank-you-header" : ""}`}>
                 <div className="logo-div">
                     <a href="/"><img src={!isSticky ? logo : logo} alt="Logo" className="logo"/></a>
                 </div>
@@ -92,7 +89,7 @@ export default function Header(){
                     <BiLogIn className='login-icon'/> */}
                 </div>
                 <div className="btn-icon-div">
-                    <a className="btn-white-div" href="#contact-us">
+                    <a className="btn btn-navy-blue" href={`${location.pathname === "/thank-you" ? "/" : "#contact-us"}`}>
                         <div className="btn-white phone" >
                             {/* <FlipLinkBtn isHovered={isHovered}> */}
                                 {(isMobile) ? <MdCall className="login-icon"/> : "Contact Us"}

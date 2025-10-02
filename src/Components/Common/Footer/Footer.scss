@@ -1,270 +1,301 @@
 .footer {
-    position: relative; // Needed for absolute positioning of .wecan_stroke_text
-    overflow: hidden; // Ensures nothing spills out from footer padding issues
-    bottom: unset;
-    padding-top: 50px;
-    // padding-bottom: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
-    background: black;
+    padding: 50px 100px ;
+    background: #1d231f;
     color: white;
-    // border: 1px solid white;
+    overflow: hidden;
 
-    @media (max-width: 1310px) {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    @media (max-width: 768px) {
-        padding-left: 30px;
-        padding-right: 30px;
+    hr {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background: #eaeaea;
+        border: .5px solid #808080;
     }
 
-    .footer_row {
+    .footer-gallery {
+        display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .gallery-div {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .footer-row {
+        margin-top: 50px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 30px;
-        position: relative; // Ensure this content is above the absolute text
-        margin-bottom: 20px;
+        gap: 20px;
 
-        @media (max-width: 1310px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            justify-content: center;
+        .footer_col:nth-child(1) {
+            flex-basis: 25%;
         }
 
-        @media (max-width: 950px) {
-            // margin-bottom: 30px;
+        .footer_col:nth-child(2), .footer_col:nth-child(3){
+            flex-basis: 20%;
         }
 
-        @media (max-width: 600px) {
-            grid-template-columns: repeat(1, 1fr);
+        .footer_col:nth-child(4) {
+            flex-basis: 25%;
         }
 
         .footer_col {
-            padding: 0;
-            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
-            &:nth-child(1) {
-                flex-basis: 25%;
-                max-width: 25%;
-                @media (max-width: 1310px) {
-                    flex-basis: 100%;
-                    max-width: 100%;
-                }
-            }
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
-                flex-basis: 22%;
-                max-width: 22%;
-                 @media (max-width: 1310px) {
-                    flex-basis: 100%;
-                    max-width: 100%;
-                }
+            h1 {
+                font-size: 20px;
             }
 
-            .head {
-                font-size: 25px;
-                // text-transform: uppercase;
-                margin-bottom: 15px;
-                font-weight: bold;
-                color: white;
-            }
-
-            &.contact_us_col {
-                .company_logo {
-                    width: 200px;
-                    height: auto;
+            .contact_content {
+                p {
+                    font-size: 14px;
+                    padding-right: 30px;
                 }
 
-                .contact_details_group {
-                    margin-top: 20px;
-                    
-                    p {
-                        font-size: 14px;
-                        line-height: 1.5;
-                        margin-bottom: 5px;
-                        color: #ccc;
+                .logo {
+                    margin-top: -20px;
+                    margin-bottom: 20px;
+                    display: block;
+    
+                    img {
+                        width: 100px;
+                    }
+                }
 
-                        a {
-                            color: #ccc;
-                            text-decoration: none;
-                            &:hover {
-                                color: #259FBA;
-                            }
+                .contact_details {
+                    // margin-top: 20px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    .details {
+                        margin-top: 20px;
+                        // padding-right: 20px;
+
+                        h2 {
+                            font-size: 14px;
+                            text-transform: uppercase;
+                        }
+    
+                        p {
+                            font-size: 12px;
+                            margin-top: 5px;
                         }
                     }
                 }
-                // .social_links_small styling if you uncommented them in JSX
             }
 
             ul {
-                margin: 0;
-                padding: 0;
+                margin-top: 15px;
 
                 li {
                     list-style: none;
-                    margin-bottom: 10px;
-                    font-size: 16px;
-                    color: #ccc;
+                    padding-top: 10px;
+                    font-size: 14px;
 
                     a {
-                        color: #ccc;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                        &:hover {
-                            color: #259FBA;
-                        }
+                        color: white;
+                    }
 
-                        &.active {
-                            color: #259FBA;
-                        }
+                    a:hover {
+                        color: #c6a142;
+                    }
+
+                    a.active {
+                        color: #c6a142;
                     }
                 }
             }
+
+            .newsletter_details {
+                margin-top: 20px;
+
+                p {
+                    font-size: 14px;
+                }
+
+                .newsletter_input {
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    input {
+                        padding: 10px 5px 10px;
+                        outline: none;
+                        appearance: none;
+                        border: none;
+                        display: flex;
+                        text-align: left;
+                        justify-content: flex-start;
+                        width: 100%;
+                        background: #333;
+                        border: 2px solid #eaeaea;
+                        border-radius: 5px;
+                    }
+    
+                    input:hover {
+                        background: #fff;
+                        border: 2px solid #eaeaea;
+                    }
+    
+                    button {
+                        display: block;
+                        // justify-content: flex-end;
+                        width: 100px;
+                        padding: 10px 10px 10px;
+                        background: #c6a142;
+                        color: white;
+                        border: none;
+                        font-weight: 700;
+                        font-size: 15px;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        // margin-left: auto;
+                        margin-right: auto;
+                    }
+            
+                    button:hover {
+                        background: white;
+                        color: #c6a142;
+                    }
+                }
+
+                .social_head {
+                    margin-top: 20px;
+                }
+
+                .social_links {
+                    // margin-top: 30px;
+                    display: flex;
+                    justify-content: left;
+                    text-align: left;
+                    align-items: center;
+                    padding: 10px 0 10px 0;
+                    margin-left: -15px;
+    
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 40px;
+                        margin-left: 15px;
+                        cursor: pointer;
+                        z-index: 1;
+                        color: #fe6b00;
+                        transition: .3s;
+                    }
+
+                    svg:hover {
+                        color: #fff;
+                        transform: scale(1.1);
+                        transition: .3s;
+                    }
+                }
+            } 
         }
     }
 
-    // New styles for the "WECAN" stroke text
-    .wecan_stroke_text {
-        position: absolute; // Position absolutely within the footer
-        bottom: 40px; // Adjust this value to control vertical position above the copyright
-        left: 50%; // Center horizontally
-        transform: translateX(-50%); // Fine-tune horizontal centering
-        font-size: 120px; // Large font size for the effect
-        font-weight: bold;
-        white-space: nowrap; // Prevent text from wrapping
-        opacity: 0.1; // Make it semi-transparent as seen in the screenshot
-        pointer-events: none; // Ensures text doesn't block clicks on content behind it
-        user-select: none; // Prevent text selection
-        z-index: 1; // Ensures it's behind other footer content
-
-        img {
-            // transform: rotate(270deg);
-            width: 1200px;
-            height: 100%;
-        }
-
-        @media (max-width: 1700px) {
-            bottom: 45px;
-            img {
-                // transform: rotate(270deg);
-                width: 900px;
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 1450px) {
-            img {
-                // transform: rotate(270deg);
-                width: 800px;
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 1310px) {
-            margin-bottom: 0px;
-            bottom: 350px;
-            left: auto;
-            right: -250px;
-            transform: rotate(-90deg);
-            font-size: 90px;
-
-            img {
-                // transform: rotate(270deg);
-                width: 600px;
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 950px) {
-            bottom: 320px;
-            left: auto;
-            right: -210px;
-            transform: rotate(-90deg);
-            font-size: 90px;
-
-            img {
-                // transform: rotate(270deg);
-                width: 500px;
-                height: 100%;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            position: relative;
-            margin-bottom: 0px;
-            bottom: 0px;
-            display: flex;
-            justify-content: center;
-            right: auto;
-            transform: rotate(0deg);
-
-            img {
-                // transform: rotate(270deg);
-                width: 400px;
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 500px) {
-            img {
-                // transform: rotate(270deg);
-                width: 300px;
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 400px) {
-            img {
-                // transform: rotate(270deg);
-                width: 250px;
-                height: 100%;
-            }
-        }
-    }
-
-    // Styles for the very bottom section (Privacy Policy, Terms, Copyright)
-    .bottom_footer {
-        background: black;        
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 20px 0px 50px 0px;
-        // margin-top: 40px;
-        position: relative; // Ensure it stays above the absolute text
-        z-index: 1; // Make sure copyright text is above the large "WECAN" text
-
+    .footer-bottom {
+        margin-top: 30px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        font-size: 13px;
 
-        @media (max-width: 600px) {
-            flex-direction: column;
-            text-align: center;
-            .left_section {
-                margin-bottom: 10px;
-            }
-        }
-
-        .left_section {
+        .links {
             display: flex;
-            align-items: center;
-            color: #ccc;
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}
 
-            p {
-                margin: 0;
-            }
+@media (max-width: 1100px) {
+    .footer {
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: space-between;
+            width: 100%;
 
-            .separator {
-                margin: 0 10px;
-                color: #ccc;
+            .contact.end {
+                justify-content: flex-end;
             }
         }
 
-        .right_section {
-            color: #ccc;
+        .footer-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .footer_col:nth-child(1), .footer_col:nth-child(2) {
+                flex-basis: 50%;
+            }
+
+            .footer_col:nth-child(3), .footer_col:nth-child(4)   {
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        .footer-bottom {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+
+            .links {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            padding-left: 50px;
+        }   
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        .footer-row {
+            padding-left: 50px;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }

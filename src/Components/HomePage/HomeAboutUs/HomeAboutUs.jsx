@@ -1,22 +1,30 @@
 import "./HomeAboutUs.scss"
 
-import image from "../../../Assets/Common/about-us.webp"
+import image from "../../../Assets/Gallery/ferrari-world3.jpg"
 
 export default function HomeAboutUs() {
     return (
         <section>
             <div className="about-company-section section-container">
-                <div className="head-div">
-                    <div className="head-top">
-                    <h3 className="top-title">About Us | WeCan Universe</h3>
-                    </div>
-                    <h1 className="main-title">Digital Marketing Experts:<br/> Elevate Your Online Presence with <span className="color">Proven Strategies</span></h1>
-                    <p className="description">At Wecan Universe, we are a collective ownership company driven by a shared vision of excellence in <a className="underline" href="/services/digital-marketing">digital marketing</a>. Our team of digital marketing experts collaborates to provide innovative online marketing solutions that help businesses grow and enhance their profitability.</p>
-                    <p className="description">Our collective ownership model is at the heart of our success, each member of our team has a stake in the success of our clients. This ownership model fosters a deep sense of responsibility and commitment, driving us to deliver exceptional service and results.</p>
-                    <a href="/about-us"><div className="btn-black">About Company</div></a>
+            <div className="head-div">
+                <div className="head-top">
+                    <h3 className="top-title">About Us | Acute Tourism</h3>
                 </div>
+                <h1 className="main-title">
+                Your Trusted Travel Partner:<br/> 
+                Explore Dubai, Abu Dhabi & Beyond with <span className="color-brown">Unforgettable Journeys</span>
+                </h1>
+                <p className="description">
+                At <strong>Acute Tourism</strong>, we design memorable experiences in Dubai and Abu Dhabi — 
+                from cultural city tours to luxury desert safaris, blending comfort, adventure, and local expertise.
+                </p>
+                <p className="description">
+                With <strong>competitive pricing</strong> and <strong>global coverage</strong>, we deliver seamless travel, exceptional value, and lasting memories.
+                </p>
+            <a href="/about-us"><div className="btn btn-navy-blue">Our Services</div></a>
+            </div>
                 <div className="img-div">
-                    <img src={image} alt="We Can Universe" />
+                    <img src={image} alt="Acute Tourism" />
                 </div>
             </div>
         </section>

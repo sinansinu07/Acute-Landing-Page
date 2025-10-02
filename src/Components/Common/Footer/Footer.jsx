@@ -1,86 +1,148 @@
-import logo from "../../../Assets/Logo/damac-white-logo.webp"
-
-import { FaFacebook, FaLinkedin, FaTelegram, FaTelegramPlane, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import "./Footer.scss"
 
+import logo from "../../../Assets/Logo/acute-tourism-logo.png"
+import image1 from "../../../Assets/Gallery/abra-2.webp"
+import image2 from "../../../Assets/Gallery/ain-dubai-observation-wheel.webp"
+import image3 from "../../../Assets/Gallery/ferrari-world3.jpg"
+import image4 from "../../../Assets/Gallery/dessert-safari-dune.jpg"
+import image5 from "../../../Assets/Gallery/xclusive-dinner-cruise.jpg"
+// import image6 from "../../../Assets/Gallery/sky-dive-dubai.avif"
+import { MdOutlineLocationOn } from 'react-icons/md';
+import { IoCallOutline, IoMailOpenOutline } from 'react-icons/io5';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
+
+const gallery = [
+    {
+        id: 1,
+        img: image1
+    },
+    {
+        id: 2,
+        img: image2
+    },
+    {
+        id: 3,
+        img: image3
+    },
+    {
+        id: 4,
+        img: image4
+    },
+    {
+        id: 5,
+        img: image5
+    },
+    // {
+    //     id: 6,
+    //     img: image6
+    // },
+]
 
 export default function Footer() {
-    return (
-        <footer className="footer">
-            {/* <div className="footer-head"></div> */}
+    const location = useLocation()
 
-            <div className="footer_row">
-                {/* Column 1: Contact Us */}
-                <div className="footer_col contact_us_col">
-                    <div className="contact_content">
-                        {/* DAMAC Logo */}
-                        <img src={logo} className="company_logo" alt="DAMAC Properties" />
-                        <div className="contact_details_group">
-                            <p className="description">
-                                Experience the ultimate island lifestyle at DAMAC Islands Phase 2, where luxury meets nature in Dubai's most exclusive waterfront community.
-                            </p>
-                            <p className="address">
-                                DAMAC Islands Phase 2,<br /> Dubai, United Arab Emirates
-                            </p>
-                            {/* <p className="email">
-                                <a href="mailto:islands@damacgroup.com">islands@damacgroup.com</a>
-                            </p>
-                            <p className="phone">
-                                <a href="tel:+97144249044">+971 4 424 9044</a>
-                            </p> */}
+    return (
+        <footer>
+            <div className="footer">
+                <Swiper
+                    modules={[Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={4}
+                    loop={true}
+                    speed={1000}
+                    effect="coverflow"
+                    grabCursor={true}
+                    autoplay={{
+                        delay: 2000,  // Adjust scrolling speed
+                        disableOnInteraction: false,  // Keeps autoplay running after user interaction
+                    }}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 50,
+                        modifier: 1,
+                        slideShadows: false, 
+                    }}
+                    className="footer-gallery"
+                >
+                    {gallery.map((gallery) => {
+                        return (
+                            <SwiperSlide key={gallery.id}>
+                                <div className="gallery-div" key={gallery.id}>
+                                    <img src={gallery.img} alt=""/> 
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
+                <hr/>
+                <div className="footer-row container">
+                    <div className="footer_col">
+                        <div className="contact_content">
+                            <div className="logo">
+                                <img src={logo} alt="" />
+                            </div>
+                            <p>Acute Tourism is a prestigious Dubai-based luxury travel and tourism company dedicated to curating extraordinary travel experiences for discerning clients.</p>
                         </div>
                     </div>
-                </div>
-
-                {/* Column 2: Island Activities */}
-                <div className="footer_col">
-                    <h2 className="head">Island Activities</h2>
+                    <div className="footer_col">
+                    <div className="dashborad-heading">
+                        <h1 className='dashborad-main-heading'>Dubai Experiences</h1>
+                    </div>
                     <ul>
-                        <li>Aqua Dome & Water Sports</li>
-                        <li>Jungle River & Zipline</li>
-                        <li>Wildlife Parks & Nature</li>
-                        <li>Yoga & Wellness</li>
-                        <li>Private Boat Rides</li>
+                        <li>Desert Safari</li>
+                        <li>Dhow Cruise Dinner</li>
+                        <li>Dubai City Tour</li>
+                        <li>Burj Khalifa Experience</li>
+                        <li>Skydiving Over Palm Jumeirah</li>
                     </ul>
-                </div>
+                    </div>
 
-                {/* Column 3: Island Amenities */}
-                <div className="footer_col">
-                    <h2 className="head">Island Amenities</h2>
+                    <div className="footer_col">
+                    <div className="dashborad-heading">
+                        <h1 className='dashborad-main-heading'>Abu Dhabi Experiences</h1>
+                    </div>
                     <ul>
-                        <li>Luxury Villas (4-6 Bedrooms)</li>
-                        <li>Private Pools & Gardens</li>
-                        <li>Hot Springs Spa</li>
-                        <li>Fitness Centers</li>
-                        <li>Wedding Venues</li>
+                        <li>Sheikh Zayed Grand Mosque</li>
+                        <li>Ferrari World</li>
+                        <li>Warner Bros World</li>
+                        <li>Yas Waterworld</li>
+                        <li>Abu Dhabi City Tour</li>
                     </ul>
-                </div>
+                    </div>
 
-                {/* Column 4: Island Experience */}
-                <div className="footer_col">
-                    <h2 className="head">Island Experience</h2>
+                    <div className="footer_col">
+                    <div className="dashborad-heading">
+                        <h1 className='dashborad-main-heading'>Theme Parks & Adventures</h1>
+                    </div>
                     <ul>
-                        <li>Lagoon Tours & Hammocks</li>
-                        <li>Mini Golf & Sports</li>
-                        <li>Parrot Park & Wildlife</li>
-                        <li>Central Hub Fountain</li>
-                        <li>Gondola Style Paddling</li>
+                        <li>IMG Worlds of Adventure</li>
+                        <li>Dubai Parks & Resorts</li>
+                        <li>Atlantis Aquaventure</li>
+                        <li>Wild Wadi Waterpark</li>
+                        <li>Global Village</li>
                     </ul>
-                </div>
-            </div>
+                    </div>
 
-            {/* Bottom Footer Section */}
-            <div className="bottom_footer">
-                <div className="left_section">
-                    <p>Privacy Policy</p>
-                    <span className="separator">|</span>
-                    <p>Terms & Conditions</p>
                 </div>
-                <div className="right_section">
-                    <p>© 2025. All Rights Reserved by DAMAC Islands Phase 2.</p>
+                <hr/>
+                <div className="footer-bottom container">
+                    <p>Copyright 2025 Acute Tourism. All rights reserved.</p>
+                    <div className="links">
+                        <p>Settings & Privacy</p>
+                        <p>Faqs</p>
+                        <p>Support</p>
+                    </div>
                 </div>
             </div>
         </footer>
-    );
+    )
+    
 }
