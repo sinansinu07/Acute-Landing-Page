@@ -8,16 +8,16 @@ import Amenities from "../Components/HomePage/Amenities/Amenities";
 import Gallery from "../Components/Common/Gallery/Gallery";
 import Pricing from "../Components/Common/Pricing/Pricing";
 import Helmet from "../General/Helmet";
-import { initHomePageScripts } from "../Utils/scripts";
+// import { initHomePageScripts } from "../Utils/scripts";
 import HomeAboutUs from "../Components/HomePage/HomeAboutUs/HomeAboutUs";
 import QuickContact from "../Components/Common/QuickContact/QuickContact";
 import Testimonials from "../Components/HomePage/Testimonials/Testimonials";
 
 export default function HomePage() {
-    useEffect(() => {
-        const cleanup = initHomePageScripts();
-        return cleanup;
-    }, []);
+    // useEffect(() => {
+    //     const cleanup = initHomePageScripts();
+    //     return cleanup;
+    // }, []);
 
     return (
         <Fragment>
