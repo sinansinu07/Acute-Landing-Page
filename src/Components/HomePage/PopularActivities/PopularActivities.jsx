@@ -151,7 +151,7 @@ export default function PopularActivities() {
                                     <div className="item-content">
                                         <h1 className="item-name">{service?.name}</h1>
                                         <p className="item-price"> AED {service.price}</p>
-                                        <div className="add-to-cart"><IoMdCall /></div>
+                                        <a href="#contact-us"><div className="add-to-cart"><IoMdCall /></div></a>
                                         {/* <p className="item-description">{service?.description}</p> */}
                                         {/* <div className="item-icons">
                                             <IoFastFood />

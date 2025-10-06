@@ -117,7 +117,7 @@ export default function PopularCategories() {
       
 
     return (
-        <section>
+        <section id="tours-activities">
             <div className="popular-activities section-container">
                 <div className="heading-section">
                     <div className="title">

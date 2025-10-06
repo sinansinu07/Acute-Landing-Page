@@ -21,7 +21,7 @@ export default function HomeAboutUs() {
                 <p className="description">
                 With <strong>competitive pricing</strong> and <strong>global coverage</strong>, we deliver seamless travel, exceptional value, and lasting memories.
                 </p>
-            <a href="/about-us"><div className="btn btn-navy-blue">Our Services</div></a>
+            <a href="#tours-activities"><div className="btn btn-navy-blue">Our Tours</div></a>
             </div>
                 <div className="img-div">
                     <img src={image} alt="Acute Tourism" />

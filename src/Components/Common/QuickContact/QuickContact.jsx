@@ -12,7 +12,7 @@ export default function QuickContact() {
                 <div className="quick-contact-content">
                         <h1>Experience Luxury,<br/> Explore the World with Acute Tourism</h1>
                     <div className="button-div">
-                        <a href="/contact-us"><button className="btn btn-navy-blue">
+                        <a href="#contact-us"><button className="btn btn-navy-blue">
                             <div className="icon-div">
                                 <FaPaperPlane />
                             </div>
