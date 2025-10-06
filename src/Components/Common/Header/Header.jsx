@@ -90,11 +90,7 @@ export default function Header(){
                 </div>
                 <div className="btn-icon-div">
                     <a className="btn btn-navy-blue" href={`${location.pathname === "/thank-you" ? "/" : "#contact-us"}`}>
-                        <div className="btn-white phone" >
-                            {/* <FlipLinkBtn isHovered={isHovered}> */}
-                                {(isMobile) ? <MdCall className="login-icon"/> : "Contact Us"}
-                            {/* </FlipLinkBtn> */}
-                        </div>
+                        {(isMobile) ? <MdCall className="login-icon"/> : "Contact Us"}
                     </a>
                     {!mobileMenu ? <RiMenu2Line className="menu-icon" onClick={toggleMenu}/> : <IoClose onClick={toggleMenu} className="menu-icon close"/> }
                 </div>

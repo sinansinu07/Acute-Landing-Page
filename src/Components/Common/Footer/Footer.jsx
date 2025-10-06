@@ -12,11 +12,16 @@ import image2 from "../../../Assets/Gallery/ain-dubai-observation-wheel.webp"
 import image3 from "../../../Assets/Gallery/ferrari-world3.jpg"
 import image4 from "../../../Assets/Gallery/dessert-safari-dune.jpg"
 import image5 from "../../../Assets/Gallery/xclusive-dinner-cruise.jpg"
-// import image6 from "../../../Assets/Gallery/sky-dive-dubai.avif"
-import { MdOutlineLocationOn } from 'react-icons/md';
-import { IoCallOutline, IoMailOpenOutline } from 'react-icons/io5';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
-import { useLocation } from 'react-router-dom';
+import image6 from "../../../Assets/Activities/abudhabi-banner.webp"
+import image7 from "../../../Assets/Activities/burj-khalifa-2.jpg"
+import image8 from "../../../Assets/Activities/dessert-safari.jpg"
+import image9 from "../../../Assets/Activities/IMG-world-adventure-fast-track.webp"
+import image10 from "../../../Assets/Activities/louvre.jpeg"
+import image11 from "../../../Assets/Activities/museum-of-the-future.webp"  
+import image12 from "../../../Assets/Activities/evening-desert-safari.jpeg"
+import image13 from "../../../Assets/Activities/Private-Balloon-Flights.jpg"
+import image14 from "../../../Assets/Activities/helicoptor-tour.jpg"
+
 
 const gallery = [
     {
@@ -39,15 +44,45 @@ const gallery = [
         id: 5,
         img: image5
     },
-    // {
-    //     id: 6,
-    //     img: image6
-    // },
+    {
+        id: 6,
+        img: image6
+    },
+    {
+        id: 7,
+        img: image7
+    },
+    {
+        id: 8,
+        img: image8
+    },
+    {
+        id: 9,
+        img: image9
+    },
+    {
+        id: 10,
+        img: image10
+    },
+    {
+        id: 11,
+        img: image11
+    },
+    {
+        id: 12,
+        img: image12
+    },
+    {
+        id: 13,
+        img: image13
+    },
+    {
+        id: 14,
+        img: image14
+    },
 ]
 
 export default function Footer() {
-    const location = useLocation()
-
     return (
         <footer>
             <div className="footer">

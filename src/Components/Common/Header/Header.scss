@@ -127,25 +127,9 @@
         z-index: 1003;
     }
 
-    .btn-white-div {
-        z-index: 1003;
-    }
-
-    .btn-white {
-        width: 130px;
-        font-weight: normal;
-        z-index: 1003 !important;
-    }
-
-    .btn-white.phone {
-        .login-icon {
-            font-size: 20px;
-        }
-    }
-
     .menu-icon, .menu-icon-close {
         color: white;
-        font-size: 30px;
+        font-size: 25px;
         cursor: pointer;
         display: none;
         z-index: 1001;
@@ -324,16 +308,11 @@
 
 @media (max-width: 600px) {
     .navbar {
-        .btn-white.login, .btn-white.phone {
-            padding: 0px;
-            height: 40px;
-            width: 50px;
-            transition: all 0.5s ease;
+        .logo-div {
+            width: 60px;
         }
-    }
-    .whatsapp-div {
-        bottom: 30px;
-        right: 30px;
+
+
     }
 }
 
@@ -426,15 +405,6 @@
 @media (max-width: 500px) {
     .navbar {
         padding: 5px 30px;
-
-        .logo-div {
-            width: 120px;
-        }
-
-        .btn-white {
-            width: 120px;
-            font-size: 12px;
-        }
 
         .menu-icon, .menu-icon-close {
             font-size: 23px;
