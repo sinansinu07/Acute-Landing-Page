@@ -17,8 +17,10 @@ import image9 from "../../../Assets/Gallery/ferrari-world3.jpg"
 import image10 from "../../../Assets/Activities/dune-buggy-dubai.jpeg"
 import image11 from "../../../Assets/Activities/wild-wadi-waterpark-hd.webp"
 import image12 from "../../../Assets/Activities/overnight-desert-stay-in-abu-dhabi.webp"
-
-
+import image13 from "../../../Assets/Activities/yatch-tour-2.webp"
+import image14 from "../../../Assets/Activities/jet-ski.jpg"
+import image15 from "../../../Assets/Activities/yas-island-water-park.avif"
+import image16 from "../../../Assets/Activities/dubai-dolphinarium.webp"
 
 const tourActivities = [
     {
@@ -117,6 +119,38 @@ const tourActivities = [
         image: image12,
         price: 200,
       },
+      {
+        id: 13,
+        name: "Super yacht cruise in Dubai",
+        category: "Water Activities",
+        city: "Dubai",
+        image: image13,
+        price: 460,
+      },
+      {
+        id: 14,
+        name: "Jet Ski Tour in Dubai",
+        category: "Water Activities",
+        city: "Dubai",
+        image: image14,
+        price: 120,
+      },
+      {
+        id: 15,
+        name: "Yas Island Water Park",
+        category: "Theme & Water Parks",
+        city: "Abu Dhabi",
+        image: image15,
+        price: 330,
+      },
+      {
+        id: 16,
+        name: "Dubai Dolphinarium",
+        category: "Theme & Water Parks",
+        city: "Dubai",
+        image: image16,
+        price: 110,
+      }
   ];
   
 

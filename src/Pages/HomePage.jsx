@@ -9,6 +9,7 @@ import QuickContact from "../Components/Common/QuickContact/QuickContact";
 import Testimonials from "../Components/HomePage/Testimonials/Testimonials";
 import PopularActivities from "../Components/HomePage/PopularActivities/PopularActivities";
 import PopularCategories from "../Components/HomePage/PopularCategories/PopularCategories";
+import UpcomingEvents from "../Components/HomePage/UpcomingEvents/UpcomingEvents";
 
 export default function HomePage() {
     // useEffect(() => {
@@ -21,6 +22,7 @@ export default function HomePage() {
             <Helmet title="Acute Tourism | Luxury Travel and Tourism" />
             <HomeHero/>
             <HomeAboutUs/>
+            <UpcomingEvents/>
             <PopularCategories/>
             <QuickContact/>
             <PopularActivities/>
